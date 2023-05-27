@@ -4,7 +4,6 @@ using MercadoPago.Client.Common;
 using MercadoPago.Client.Payment;
 using MercadoPago.Client.Preference;
 using MercadoPago.Config;
-using MercadoPago.Resource.Preference;
 
 namespace MercadoPago;
 
@@ -77,7 +76,7 @@ public partial class MainPage : ContentPage
        
 
         var client = new PreferenceClient();
-        Preference preference =  client.CreateAsync(preferenceRequest).Result;
+        var preference =  client.CreateAsync(preferenceRequest).Result;
 
         URLMP = preference.InitPoint;
         
